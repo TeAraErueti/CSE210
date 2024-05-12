@@ -44,11 +44,7 @@ class Program
             scripture.DisplayText();
 
             Console.WriteLine("Please press Enter to continue or type 'quit' to leave the program: ");
-            if (Console.ReadLine() == "quit")
-            {
-                break;
-            }
-           
+            
         }
         
         Console.Write("Good bye");
