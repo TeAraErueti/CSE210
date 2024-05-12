@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("--------- Welcome to the Scripture Memorizer --------");
+        Console.WriteLine("--------- Welcome to the Scripture Memorizer --------\n");
 
         Reference theReference = new(book:"", chapter:0, verse_s:0);
 
@@ -24,27 +24,33 @@ class Program
         
         Console.WriteLine("Please enter the scripture verse:\n");
         theReference.setVerse();
-        Scripture scripture = new(theReference); 
-        
+        Scripture scripture = new(theReference);
+        Console.Clear();
+        scripture.DisplayText();
+        Console.WriteLine("Please press Enter to continue or type 'quit' to leave the program: ");
 
-        string isQuit = "";
-        while (isQuit != "quit")
+        while(Console.ReadLine() != "quit")
         {
-              
+
             if(scripture.IsCompletelyHidden())
             {
+                Console.WriteLine("Thank you for playing\n");
                 break;
             }
 
-            scripture.DisplayText();
             Console.Clear();
             scripture.HideRandomWords(5);
             Console.Clear();
             scripture.DisplayText();
 
             Console.WriteLine("Please press Enter to continue or type 'quit' to leave the program: ");
-            isQuit = Console.ReadLine().ToLower();
+            if (Console.ReadLine() == "quit")
+            {
+                break;
+            }
+           
         }
-            
+        
+        Console.Write("Good bye");
     }
 }
