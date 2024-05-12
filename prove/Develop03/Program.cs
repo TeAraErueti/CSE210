@@ -1,5 +1,7 @@
 using System;
 
+//exceeding requirement: included goodbye and thankyou message for user to know when program finished. Line 39 and 52
+
 class Program
 {
     static void Main(string[] args)
