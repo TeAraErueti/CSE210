@@ -1,4 +1,4 @@
-//Exceeding requirements : Added an activity log to keep track of how many times the user participated in an activity during the program.
+//Exceeding requirements : Added an activity log to keep track of how many times the user participated in the activities during the program.
 
 using System;
 
