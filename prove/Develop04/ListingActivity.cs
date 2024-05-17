@@ -34,7 +34,7 @@ public class ListingActivity : Activity
         string prompt = GetRandomPrompt();
         Console.WriteLine($"\nPlease list as many responses you can to the following prompt:\n");
         Console.WriteLine($"----- {prompt} -----");
-        Console.Write("You may begin writing in... ");
+        Console.Write($"\nYou may begin writing in... ");
         ShowCountDown(5);
         Console.WriteLine();
 
