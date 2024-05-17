@@ -14,6 +14,8 @@ public class ListingActivity : Activity
         "What piece of advice could you give to your younger self if they were looking for guidance and inspiration?",
         "What advice would you give to someone who is stepping into the roles and responsibilities you are currently undertaking in your life?",
     };
+
+    private List<string> _userList = new List<string>();
      
     public ListingActivity()
     {
@@ -44,8 +46,10 @@ public class ListingActivity : Activity
         while (currentTime <= futureTime)
         {
             Console.Write(">");
-            Console.ReadLine();
+            _userList.Add(Console.ReadLine());
             currentTime = DateTime.Now;
         }
+        int listLength = _userList.Count;
+        Console.WriteLine($"You listed {listLength} items!");
     }
 }
