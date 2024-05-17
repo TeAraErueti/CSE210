@@ -55,7 +55,7 @@ public class ReflectingActivity : Activity
         Console.WriteLine("When you have something in your mind please press enter to continue.");
         Console.ReadLine();
         Console.WriteLine($"Now ponder on each of the following questions as they relate to this experience.");
-        Console.WriteLine($"You may begin in...");
+        Console.Write($"\nYou may begin in...");
         ShowCountDown(5);
         Console.Clear();
 
