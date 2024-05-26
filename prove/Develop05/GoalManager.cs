@@ -193,7 +193,7 @@ public class GoalManager
 
     private int SetGoalPoint()
     {
-        Console.Write("\nEnter the amount of point you want to achieve: ");
+        Console.Write("\nEnter the amount of points you want to achieve: ");
         int _goalPoint = int.Parse(Console.ReadLine());
         return _goalPoint;
     }
