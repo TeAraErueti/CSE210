@@ -1,7 +1,7 @@
 public class GoalManager
 {
     private List<Goal> _goals = new ();
-    private int _score;
+    protected int _score;
 
     private int _count = 0;
 
@@ -134,9 +134,10 @@ public class GoalManager
         goalAccomplished.RecordEvent();
         _score += goalAccomplished.GetCurrentPoint();
 
-        string congratMessage = $"\nCongratulations! You have earned {goalAccomplished.GetSetPoint()}\nYou now have {_score} points.";
+        string congratMessage = $"\nCongratulations! You have earned {goalAccomplished.GetSetPoint()} points.";
+        //\nYou now have {_score} points.";
         Console.WriteLine(congratMessage);
-        DisplayPlayerInfo();
+        //DisplayPlayerInfo();
     }
 
     private void ListGoals()
