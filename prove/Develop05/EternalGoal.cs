@@ -1,6 +1,7 @@
 public class EternalGoal : Goal
 {
     private string _typeOfGoal;
+    private bool _isComplete = false;
 
     public EternalGoal(string name, string description, int points, string goal) : base(name, description, points)
     {
@@ -17,12 +18,18 @@ public class EternalGoal : Goal
 
     public override bool IsComplete()
     {
-        return false;
+        return _isComplete;
     }
+
+    public override void SetIsCompleteToTrue()
+    {
+        _isComplete = true;
+    }
+
 
     public override string GetStringRepresentation()
     {
-        return $"{_typeOfGoal}: {_shortName} | {_description} | {_setPoints}";
+        return $"{_typeOfGoal}: {_shortName} | {_description} | {_setPoints} | {IsComplete()}";
     }
 
 }
